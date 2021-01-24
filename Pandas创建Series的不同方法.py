@@ -1,6 +1,7 @@
 # 开发者：Lingyu
 # 开发时间：2021/1/23 18:59
 import pandas as pd
+import numpy as np
 import string
 
 # 方法一：
@@ -28,6 +29,10 @@ t5 = pd.Series(t3, index=list(string.ascii_uppercase[5:17]))  # 给t3重新指�
 print('t5:', t5)
 print(type(t5))
 print('*:' * 50)  # naN为float
+
+# 具体举例
+t6 = pd.Series(np.arange(10), index = list(string.ascii_uppercase[:10]))
+print('t6:', t6)
 
 # 修改Series类型,与Numpy操作相同
 t4 = t4.astype(float)
